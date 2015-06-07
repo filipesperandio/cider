@@ -1,8 +1,9 @@
 {
     "after-scripts": [
         "./scripts/after.sh",
-        "./scripts/hostname.sh",
+        "./scripts/hot.corners.sh",
         "./scripts/login.items.sh",
+        "./scripts/mac.defaults.sh",
         "./scripts/spectacle.defaults.sh",
         "./scripts/restart.affected.sh",
         "./scripts/docker4work.sh",
@@ -141,6 +142,7 @@
     ],
     "symlinks": {
         ".gitconfig": "~",
+        ".gitignore": "~",
         ".gemrc": "~"
     },
     "taps": [

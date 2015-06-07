@@ -11,7 +11,7 @@
         "NSWindowResizeTime": 0.001
     },
     "defaults write com.apple.menuextra.battery": {
-        "ShowPercent": "NO",
+        "ShowPercent": "YES",
         "ShowTime": "NO"
     },
     "com.apple.Safari": {
