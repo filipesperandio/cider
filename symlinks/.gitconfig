@@ -1,6 +1,7 @@
 [user]
-  name = Guilherme J. Tramontina
-  email = guilherme.tramontina@gmail.com
+	email = filipesperandio@gmail.com
+	name = Filipe Esperandio
+
 [color]
   status = auto
   branch = auto
@@ -17,15 +18,13 @@
   remote = cyan
 
 [color "diff"]
-  meta = yellow
-  frag = cyan
+  meta = yellow 
+  frag = cyan 
   old = red
-  new = green
+  new = green 
 
 [color "status"]
-  added = green
   changed = yellow
-  untracked = blue
 
 [core]
   excludesfile = ~/.gitignore
@@ -35,27 +34,47 @@
 [diff]
   ignoreSubmodules = dirty
 
+[apply]
+ whitespace = fix
+
 [alias]
+  a = add
+  aa = add --all
+  dc = diff --cached
+  alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t=> \\2/' | sort
   l = log
   lg = log --graph --pretty=format:'%C(yellow)%h %Cblue%aN %Cgreen%ar %Creset%s'
+  lg-nocolor = log --pretty=format:'%h %aN %ar %s' 
+  log-summary = log --pretty=format:'%s' 
   ls = log --stat
   last = log -1 HEAD
   w = log --name-status #short whatchanged
   s = show
-  d = diff
+  d = diff --word-diff
   ds = diff --staged
   st = status
   ss = status -s
-  ci = commit
   co = checkout
-  cf = "!git ss | grep UU --color"
-  ccf = "!git ss | grep UU --color | wc -l"
+  ci = commit
+  cf = "!git ss | grep '[UD][UD]' --color"
+  ccf = "!git cf | wc -l"
   br = branch
-  p = push
+  px = push
+  pl = pull
+  pr = pull --rebase
   r = remote
-  reb = pull --rebase
   unstage = reset HEAD --
-  browse = instaweb -d webrick
+  this = !git init && git add . && git commit -m \"Initial commit.\"
+  amend = !git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend
+  x  = commit -m
+  xa = commit -a -m
+  ignore=!([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore
+  apl = "!findstash() { git stash apply `git stash list | grep $1 | cut -d':' -f1`; }; findstash"
+  unchange = "!git ls-files -v|grep '^h'"
+  assume-unchange = update-index --assume-unchanged
+  no-assume-unchange = update-index --no-assume-unchanged
   boom = clean -xfd
+  fo = fetch origin
+
 [push]
-	default = simple
+  default = simple
