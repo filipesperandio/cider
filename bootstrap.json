@@ -7,6 +7,7 @@
         "./scripts/mac.defaults.sh",
         "./scripts/spectacle.defaults.sh",
         "./scripts/fix_apple_path_helper.sh",
+        "./scripts/install_android_apis.sh",
         "./scripts/restart.affected.sh",
         "./scripts/docker4work.sh",
         "echo '\n-- PLEASE RESTART YOUR LAPTOP --\n'"
