@@ -3,6 +3,7 @@
         "./scripts/after.sh",
         "./scripts/hot.corners.sh",
         "./scripts/login.items.sh",
+        "./scripts/trackpad.defaults.sh",
         "./scripts/mac.defaults.sh",
         "./scripts/spectacle.defaults.sh",
         "./scripts/restart.affected.sh",
