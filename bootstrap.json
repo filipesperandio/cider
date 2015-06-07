@@ -6,6 +6,7 @@
         "./scripts/trackpad.defaults.sh",
         "./scripts/mac.defaults.sh",
         "./scripts/spectacle.defaults.sh",
+        "./scripts/karabiner.sh",
         "./scripts/fix_apple_path_helper.sh",
         "./scripts/install_android_apis.sh",
         "./scripts/restart.affected.sh",
