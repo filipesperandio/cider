@@ -141,7 +141,6 @@
     ],
     "symlinks": {
         ".gitconfig": "~",
-        ".vimrc": "~",
         ".gemrc": "~"
     },
     "taps": [
