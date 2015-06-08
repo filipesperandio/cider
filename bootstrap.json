@@ -35,13 +35,14 @@
         "licecap",
         "monodraw",
         "omnigraffle",
+        "paragon-ntfs",
         "screenhero",
         "seashore",
         "shortcat",
+        "silverlight",
         "sketch",
         "skitch",
         "skype",
-        "silverlight",
         "slack",
         "spectacle",
         "spotify",
@@ -145,9 +146,9 @@
         "yasm"
     ],
     "symlinks": {
+        ".gemrc": "~",
         ".gitconfig": "~",
-        ".gitignore": "~",
-        ".gemrc": "~"
+        ".gitignore": "~"
     },
     "taps": [
         "caskroom/cask",
