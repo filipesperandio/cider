@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+[[ `ls $(brew --prefix android)/build-tools -l | grep 22.0` ]] && exit 0
 
 echo y | android update sdk --all --no-ui --force --filter android-21,android-22
 echo y | android update sdk --all --no-ui --force --filter tools
