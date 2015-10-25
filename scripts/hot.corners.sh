@@ -18,7 +18,7 @@ defaults write com.apple.dock wvous-tl-corner -int 0
 defaults write com.apple.dock wvous-tl-modifier -int 0
 
 # Top right screen corner : Start screen saver
-defaults write com.apple.dock wvous-tr-corner -int 5
+defaults write com.apple.dock wvous-tr-corner -int 0
 defaults write com.apple.dock wvous-tr-modifier -int 0
 
 # Bottom left screen corner
