@@ -12,6 +12,7 @@
         "./scripts/ruby.sh",
         "./scripts/restart.affected.sh",
         "./scripts/docker4work.sh",
+        "./scripts/python.sh",
         "echo '\n-- PLEASE RESTART YOUR LAPTOP --\n'"
     ],
     "casks": [
