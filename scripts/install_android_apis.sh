@@ -24,3 +24,4 @@ echo y | android update sdk --all --no-ui --force --filter addon-google_apis-goo
 echo y | android update sdk --all --no-ui --force --filter addon-google_apis-google-21
 echo y | android update sdk --all --no-ui --force --filter addon-google_apis-google-22
 
+pip install robogif
