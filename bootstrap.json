@@ -17,22 +17,17 @@
     ],
     "casks": [
         "1password",
-        "appcleaner",
         "caffeine",
         "dropbox",
         "firefox",
         "google-chrome",
         "iterm2",
-        "java",
         "java7",
         "karabiner",
-        "licecap",
         "skype",
         "slack",
         "spectacle",
         "spotify",
-        "teamviewer",
-        "virtualbox",
         "vlc"
     ],
     "formulas": [
