@@ -32,6 +32,7 @@
   whitespace=fix,-indent-with-non-tab,trailing-space,space-before-tab,cr-at-eol
 
 [diff]
+  tool = vimdiff
   ignoreSubmodules = dirty
 
 [apply]
@@ -40,41 +41,55 @@
 [alias]
   a = add
   aa = add --all
-  dc = diff --cached
   alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t=> \\2/' | sort
+  amend = !git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend
+  apl = "!findstash() { git stash apply `git stash list | grep $1 | cut -d':' -f1`; }; findstash"
+  assume-unchange = update-index --assume-unchanged
+  boom = clean -xfd
+  br = branch
+  ccf = "!git cf | wc -l"
+  cf = "!git ss | grep '[UD][UD]' --color"
+  ci = commit
+  co = checkout
+  current-branch = rev-parse --abbrev-ref HEAD
+  d = diff --word-diff
+  dc = diff --cached
+  delete-merged-branches = "!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+  ds = diff --staged
+  fo = fetch origin
+  ignore=!([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore
+  ignored = !git ls-files -v | grep "^[[:lower:]]"
   l = log
-  lg = log --graph --pretty=format:'%C(yellow)%h %Cblue%aN %Cgreen%ar %Creset%s'
-  lg-nocolor = log --pretty=format:'%h %aN %ar %s' 
+  last = log -1 HEAD
+  lg = log --graph --pretty=tformat:'%C(yellow)%h %Cblue%aN %Cgreen%ar %Creset%s'
+  lg-date = log --pretty=tformat:'%Cgreen%ad %Cblue%aN %Creset%s'
+  lg-nocolor = log --pretty=tformat:'%h %aN %ar %s'
   log-summary = log --pretty=format:'%s' 
   ls = log --stat
-  last = log -1 HEAD
+  no-assume-unchange = update-index --no-assume-unchanged
   w = log --name-status #short whatchanged
   s = show
   d = diff --word-diff
   ds = diff --staged
   st = status
-  ss = status -s
+  ss = status --short --branch
   co = checkout
   ci = commit
   cf = "!git ss | grep '[UD][UD]' --color"
   ccf = "!git cf | wc -l"
-  br = branch
-  px = push
-  pl = pull
   pr = pull --rebase
   r = remote
+  ss = status --short --branch
+  st = status
+  sunrise = "commit --allow-empty -m ':sunrise:'"
   unstage = reset HEAD --
   this = !git init && git add . && git commit -m \"Initial commit.\"
-  amend = !git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend
+  unchange = "!git ls-files -v|grep '^h'"
+  w = log --name-status #short whatchanged
   x  = commit -m
   xa = commit -a -m
-  ignore=!([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore
-  apl = "!findstash() { git stash apply `git stash list | grep $1 | cut -d':' -f1`; }; findstash"
-  unchange = "!git ls-files -v|grep '^h'"
-  assume-unchange = update-index --assume-unchanged
-  no-assume-unchange = update-index --no-assume-unchanged
-  boom = clean -xfd
-  fo = fetch origin
 
 [push]
   default = simple
+[github]
+	user = filipesperandio

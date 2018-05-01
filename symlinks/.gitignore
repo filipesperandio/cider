@@ -7,6 +7,8 @@ tags
 *.sass-cache
 vendor/bundle
 .gems
+.gem
 .rbenv-gemsets
 .gemset
 
+node_modules*
