@@ -44,5 +44,4 @@ delete_all_login_items
 start_on_login dropbox
 start_on_login spectacle
 start_on_login caffeine
-start_on_login shortcat
 start_on_login karabiner

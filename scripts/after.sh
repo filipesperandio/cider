@@ -9,6 +9,5 @@ log () {
 # ------------------------------------------------------------------------------
 
 log "Cleaning up brew…"
-brew linkapps
 brew prune
 brew cleanup --force -s
