@@ -150,6 +150,24 @@ sudo pmset -a sms 0
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
 
+# Bluetooth quality
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Max (editable)" 80
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" 80
+defaults write com.apple.BluetoothAudioAgent "Apple Initial Bitpool (editable)" 80
+defaults write com.apple.BluetoothAudioAgent "Apple Initial Bitpool Min (editable)" 80
+defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool" 80
+defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Max" 80
+defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Min" 80
+
+# ROLLBACK
+# defaults delete com.apple.BluetoothAudioAgent "Apple Bitpool Max (editable)"
+# defaults delete com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)"
+# defaults delete com.apple.BluetoothAudioAgent "Apple Initial Bitpool (editable)"
+# defaults delete com.apple.BluetoothAudioAgent "Apple Initial Bitpool Min (editable)"
+# defaults delete com.apple.BluetoothAudioAgent "Negotiated Bitpool"
+# defaults delete com.apple.BluetoothAudioAgent "Negotiated Bitpool Max"
+# defaults delete com.apple.BluetoothAudioAgent "Negotiated Bitpool Min"
+
 # Trackpad: enable tap to click for this user and for the login screen
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
